@@ -1,5 +1,6 @@
 package main;
 
+import java.util.Arrays;
 import java.util.logging.Logger;
 
 public class Main {
@@ -9,10 +10,10 @@ public class Main {
             System.out.println("Hello " + args[0]);
         }catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("There are no one to say hello to");
-            log.severe("Index out of bound");
+            log.severe("Index out of bound " + Arrays.toString(e.getStackTrace()));
         } catch (Exception e)
         {
-            log.severe("Other exception");
+            log.severe("Other exception" + Arrays.toString(e.getStackTrace()));
         }
     }
 }
