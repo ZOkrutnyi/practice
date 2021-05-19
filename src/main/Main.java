@@ -1,9 +1,18 @@
 package main;
 
+import java.util.logging.Logger;
+
 public class Main {
+    static private final Logger log = Logger.getLogger(Main.class.getName());
     public static void main(String[] args) {
-        if (args.length>0)
-        System.out.println("Hello "+ args[0]);
-        System.out.println("There are no one to say hello to");
+        try {
+            System.out.println("Hello " + args[0]);
+        }catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("There are no one to say hello to");
+            log.severe("Index out of bound");
+        } catch (Exception e)
+        {
+            log.severe("Other exception");
+        }
     }
 }
