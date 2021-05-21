@@ -1,2 +1,2 @@
-Main-Class: Main
+main.java.Main-Class: main.java.Main
 
