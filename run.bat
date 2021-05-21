@@ -1,3 +1,4 @@
+chcp 1251
 javac src/main/Main.java
-java -cp src main.Main "Zakhar Okrutnyi"
+java -Dfile.encoding=1251 -cp src main.Main "Zakhar Okrutnyi"
 pause
